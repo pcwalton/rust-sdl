@@ -1,8 +1,8 @@
 VPATH=%VPATH%
+SDL_PREFIX=%SDL_PREFIX%
 
 RUSTC ?= rustc
 RUSTFLAGS ?=
-SDL_PREFIX ?= /usr/local/lib
 AR ?= ar
 CHMOD ?= chmod
 CP ?= cp
