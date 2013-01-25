@@ -1,4 +1,5 @@
 #!/bin/bash
 
 SRCDIR="$(cd $(dirname $0) && pwd)"
-sed "s#%VPATH%#${SRCDIR}#" ${SRCDIR}/Makefile.in > Makefile
+SDLDIR="$(pkg-config --variable=libdir sdl)"
+sed "s#%VPATH%#${SRCDIR}#" ${SRCDIR}/Makefile.in | sed "s#%SDL_PREFIX%#${SDLDIR}#" > Makefile
